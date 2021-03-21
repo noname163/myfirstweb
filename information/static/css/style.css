@@ -1,0 +1,137 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    width: 1000px;
+    margin: auto;
+}
+
+#menu_top{
+    background: #141414;
+    height:40px ;
+    color: aliceblue;
+}
+
+#banner{
+    background: red;
+    height: 180px;
+    width: 1000px;
+}
+
+#main #left{
+    width: 800px;
+    float: left;
+    min-height: 400px;
+}
+
+#main #right{
+    width: 200px;
+    background: coral;
+    float: left;
+    min-height: 400px;
+}
+
+#footer{
+    width: 1000px;
+    background: #141414;
+    text-align: center;
+    height: 60px;
+    color: aliceblue;
+    clear: left;
+    line-height: 60px;
+
+}
+#menu_top nav{
+    float: right;
+    line-height: 40px;
+    margin-right: 4px;
+}
+
+#menu_top ul{
+    margin: 0px;
+    padding: 0px;
+}
+#menu_top ul li{
+    list-style: none;
+    float: left;
+}
+
+#menu_top ul li a #add{
+    float: right;
+}
+
+
+#menu_top ul li a{
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: aliceblue;
+    padding: 0px 10px 0px 10px;
+    border-right: 1px solid #f1f1f1 ;
+}
+#menu_top ul li a.active{
+    background: blue;
+}
+#main #left ul{
+    margin: 0px;
+    padding: 0px;
+}
+#main #left ul li{
+    list-style: none;
+    clear: left;
+    border-bottom: 2px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#main #left ul li img{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#main #left ul li h2{
+    font-size: 14px;
+}
+#main #left ul li a {
+    color:#141414;
+    text-decoration: none;
+}
+
+#main {
+    margin-top: 10px;
+}
+.pagination{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50%;
+    text-align: center;
+    padding: 2px;
+
+}
+.pagination-action{
+    margin: 0 0.1em;
+    display: inline-block;
+    padding: 0.5em;
+    color: #141414;
+}
+
+.pagination-action:hover{
+    color: #3354AA;
+}
+.pagination .pagination-number{
+    background-color:#6D85C7;
+    padding: 0.5em 0.8em;
+    color: #f1f1f1;
+    border-radius: 2px;
+}
+
+#pagination-text{
+    background-color:#6D85C7;
+    padding: 0.5em 0.8em;
+    color: #f1f1f1;
+    border-radius: 2px;
+}
+
+.pagination-number:hover, .pagination-current{
+    background-color: #3354AA;
+}

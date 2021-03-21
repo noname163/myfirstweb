@@ -1,0 +1,69 @@
+{%load  static %}
+<html>
+  <head>
+    <title>HomePage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
+  </head>
+  <body>
+    <div id="menu_top">
+      <nav id= "navbar" class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <form class="d-flex" action="{% url 'tree_list_url' %}">
+          <input class="form-control me-2" name="search" id="id_q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+      <ul>
+        <li><a href="{% url 'tree_list_url' %}" title="HomePage" class="active"> HomePage</a></li>
+        <li id='add'><a href="/admin" title="add">Add picture</a></li>
+        <li><a href="{% url 'infor:login' %}" title="sign">sign in</a></li>
+      </ul>
+    </div>
+
+    <div id="banner"></div>
+
+    <div id="main">
+      <div id="left">
+        {% for infor in trees %}
+        <ul>
+            <li><a href="{% url 'infor:detail' infor.id %}">
+                <img src="{{infor.picture.url}}" alt=""  width="10%">
+                <h2><strong>Name:</strong>{{infor.name}}</h2>
+                <p><strong>Detail:</strong>{{infor.detail}}</p>
+              </a>
+            </li>
+        </ul>
+        {% endfor %}
+      </div>
+      
+      <div id="right">Right</div>
+    </div>
+
+    <div id="footer">Footer</div>
+    
+    <div class="pagination">
+      {% if trees.has_previous %}
+      <a id="pagination-text" href="?page=1">First</a>
+      <a id="pagination-text" href="?page={{trees.previous_page_number}}">Previous</a>
+      {% endif %}
+      
+      {% for num in trees.paginator.page_range %}
+      {% if trees.number == num %}
+      <span class="pagination-number">{{num}}</span>
+      {%else %}
+      <a class="pagination-number" href="?page={{num}}">{{ num }}</a>
+      {% endif %}
+      {% endfor %} 
+      
+      {% if trees.has_next %}
+      <a id="pagination-text" href="?page={{trees.next_page_number}}">Next</a>
+      <a id="pagination-text" href="?page={{ trees.paginator.num_pages }}">Last</a>
+      {% endif %}
+    </div>
+    </div>
+  </body>
+  </html>
+
+
+ 
