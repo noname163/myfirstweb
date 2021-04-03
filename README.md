@@ -8,10 +8,8 @@
 ## How to run project 
 * In terminal type `python manage.py runserver` or `python3 manage.py runserver`
 ## Contributing
-*This project not completed yet
-after **login** not have any different before that.
-*The interface of project not completed.
-
+* This project not completed yet after **login** not have any different before that.
+* The interface of project not completed.
 ## License
 * free to access 
 
