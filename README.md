@@ -7,9 +7,12 @@
 * Install django version 2.1 `python -m pip install django`
 ## How to run project 
 * In terminal type `python manage.py runserver` or `python3 manage.py runserver`
-## Contributing
+## About the project 
 * This project not completed yet after **login** not have any different before that.
 * The interface of project not completed.
+## Contributing 
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please make sure to update tests as appropriate.
 ## License
 * free to access 
 
